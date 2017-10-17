@@ -4,7 +4,7 @@ package main;
  * This program is all contained in the Main class. This program contains a method that calculates 
  * the Euler Totient function for any number n with a gcd method. This code was completed for a 
  * discrete mathematics course at Colorado College.  Euler's totient function counts the positive 
- * integers up to a given number n that are relatively prime to n.
+ * integers up to a given number n that are relatively prime to n. Test
  *  
  * @author Robert Malone 
  */
