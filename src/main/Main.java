@@ -1,25 +1,26 @@
 package main;
 
 /**
- * This program is all contained in the Main class. This program contains a method that calculates 
- * the Euler Totient function for any number n with a gcd method. This code was completed for a 
- * discrete mathematics course at Colorado College.  Euler's totient function counts the positive 
+ * This program is all contained in the Main class. This program contains a method that calculates
+ * the Euler Totient function for any number n with a gcd method. This code was completed for a
+ * discrete mathematics course at Colorado College.  Euler's totient function counts the positive
  * integers up to a given number n that are relatively prime to n. Test
- *  
- * @author Robert Malone 
+ *
+ * @author Robert Malone
  */
 
 public class Main {
-	
+
 	public static void main (String args[]){
 		System.out.println("EulerTotientFunctionTest");
 		System.out.println("");
-		
+		//Test
+
 		//Calculate Euler's Totient for 1-10
 		for(int n=1; n<=10; n++){
 			System.out.printf("phi(%d) = %d\n", n, phiFunction(n));
 		}
-		
+
 		//Calculate Euler's Totient for larger random numbers
 		int h = 76;
 		System.out.printf("phi(%d) = %d\n", h, phiFunction(h));
@@ -34,31 +35,31 @@ public class Main {
 		int d = 8404968;
 		System.out.printf("phi(%d) = %d\n", d, phiFunction(d));
 	}
-	
+
 	/***
-	 * This method returns the Euler's Totient 
+	 * This method returns the Euler's Totient
 	 * @param input is the number we want to find the Euler's Totient of
 	 * @return Euler's Totient
 	 */
 	private static int phiFunction(int input){
-		int result = 1; 
+		int result = 1;
 		for(int i=2; i<input; i++){
 			if(gcd(i, input) == 1){
 				result++;
 			}
 		}
-		return result; 
+		return result;
 	}
-	
+
 	/***
 	 * This method calculates the gcd of two numbers
-	 * @param a 
+	 * @param a
 	 * @param b
 	 * @return
 	 */
 	private static int gcd(int a, int b){
 		if(a==0){
-			return b; 
+			return b;
 		}
 		return gcd(b%a, a);
 	}
