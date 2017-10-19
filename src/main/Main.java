@@ -14,7 +14,7 @@ public class Main {
 	public static void main (String args[]){
 		System.out.println("EulerTotientFunctionTest");
 		System.out.println("");
-		//test 
+		//test with new Branch
 
 		//Calculate Euler's Totient for 1-10
 		for(int n=1; n<=10; n++){
